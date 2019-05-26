@@ -1,0 +1,33 @@
+{
+  "name": "firebase-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "firebase-example.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "express-session": "^1.16.1",
+    "firebase": "^6.0.4",
+    "firebase-admin": "^8.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChungDasilva/firebase-example.git"
+  },
+  "keywords": [
+    "firebase-example"
+  ],
+  "author": "chungdasilva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChungDasilva/firebase-example/issues"
+  },
+  "homepage": "https://github.com/ChungDasilva/firebase-example#readme"
+}

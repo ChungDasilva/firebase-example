@@ -12,14 +12,14 @@ var admin = require('firebase-admin');
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBiPA3qqLcZ6fGZcAcQqMUljUNTKDp60Ys",
-    authDomain: "fir-example-a1179.firebaseapp.com",
-    databaseURL: "https://fir-example-a1179.firebaseio.com",
-    projectId: "fir-example-a1179",
-    storageBucket: "fir-example-a1179.appspot.com",
-    messagingSenderId: "243476191388",
-    appId: "1:243476191388:web:e09eb6a5f6ebc156"
-  };
+  apiKey: "AIzaSyBiPA3qqLcZ6fGZcAcQqMUljUNTKDp60Ys",
+  authDomain: "fir-example-a1179.firebaseapp.com",
+  databaseURL: "https://fir-example-a1179.firebaseio.com",
+  projectId: "fir-example-a1179",
+  storageBucket: "fir-example-a1179.appspot.com",
+  messagingSenderId: "243476191388",
+  appId: "1:243476191388:web:e09eb6a5f6ebc156"
+};
 
 // Initialize Firebase with a default Firebase project
 firebase.initializeApp(firebaseConfig);
@@ -65,49 +65,49 @@ starCountRef.on('value', function(snapshot) {
  writeUserData(1,"chung", "chung12dt@gmail.com", "a.jpg");
  WritePostsData(2);
 
-// create Admin
-var serviceAccount = require("./fir-example-a1179-firebase-adminsdk-ytdmb-bf57ef86ad.json");
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://fir-example-a1179.firebaseio.com"
-});
+// // create Admin
+// var serviceAccount = require("./fir-example-a1179-firebase-adminsdk-ytdmb-bf57ef86ad.json");
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: "https://fir-example-a1179.firebaseio.com"
+// });
 
- admin.auth().createUser({
-  email: 'chung12dt@gmail.com',
-  emailVerified: false,
-  phoneNumber: '+84968347807',
-  password: 'secretPassword',
-  displayName: 'John Doe',
-  photoURL: 'http://www.example.com/12345678/photo.png',
-  disabled: false
-})
-  .then(function(userRecord) {
-    // See the UserRecord reference doc for the contents of userRecord.
-    console.log('Successfully created new user:', userRecord.uid);
-  })
-  .catch(function(error) {
-    console.log('Error creating new user:', error);
-  });
+//  admin.auth().createUser({
+//   email: 'chung12dt@gmail.com',
+//   emailVerified: false,
+//   phoneNumber: '+84968347807',
+//   password: 'secretPassword',
+//   displayName: 'John Doe',
+//   photoURL: 'http://www.example.com/12345678/photo.png',
+//   disabled: false
+// })
+//   .then(function(userRecord) {
+//     // See the UserRecord reference doc for the contents of userRecord.
+//     console.log('Successfully created new user:', userRecord.uid);
+//   })
+//   .catch(function(error) {
+//     console.log('Error creating new user:', error);
+//   });
 
 
-var userId = firebase.auth().currentUser.uid;
-console.log(userId);
-return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  // ...
-});
+// var userId = firebase.auth().currentUser.uid;
+// console.log(userId);
+// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+//   // ...
+// });
 
-email = "nguyen.ha.chung@captcha.com";
-password = "13121993Ch";
+// email = "nguyen.ha.chung@captcha.com";
+// password = "13121993Ch";
 
-firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode);
-  console.log(errorMessage);
-  // ...
-});
+// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   console.log(errorCode);
+//   console.log(errorMessage);
+//   // ...
+// });
 
 email = "chung12dt@gmail.com";
 password = "secretPassword";

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../script/tmpl.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center">Chung Dasilva</h1>
+    <div style="float: right">
+        <a href="./sign-in" style="margin-right: 5px" >Sign In</a>
+        <a href="./sign-up">Sign Up</a>
+    </div>
+    
+    <h2>Variable</h2>
+    <% if (locals.tagline) { %>
+        <p><%= tagline %></p>
+    <% } %>
+<h2>Loop</h2>
+<ul>
+    <% if (locals.drinks) { %>
+        <% drinks.forEach(function(drink) { %>
+            <li><%= drink.name %> - <%= drink.drunkness %></li>
+        <% }); %>
+    <% } %>
+</ul>
+</body>
+</html>

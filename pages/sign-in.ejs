@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        form {
+            margin-top: 100px;
+            border: 1px solid black;
+            width: 30%;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        form label {
+            padding-left: 1%;
+            width: 100px;
+            float: left;
+            text-align: left;
+        }
+        form input[type=text], form input[type=password] {
+            margin-bottom: 30px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="sign-in" method="POST">
+        <h3>Sign In</h3>
+        <label for="email">Email:</label> 
+        <input id="email" type="text" name="email">
+        <label for="password">Password:</label> 
+        <input id="password" type="password" name="password">
+        <input id="sign-in" type="submit" value="Sign In" style="background-color:darkgray">
+    </form>
+</body>
+</html>
